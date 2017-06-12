@@ -5,15 +5,52 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<link rel="stylesheet" href="../../css/iuapmobile.um.css">
-		<link rel="stylesheet" href="../../css/font-icons.css">	
+		<link rel="stylesheet" href="../../css/font-icons.css">
+        <link rel="stylesheet" type="text/css" href="css/islider.css">
+        <style>
+        	.iSlider-wrapper {
+        		height: 150px;
+        	}
+        </style>
+	
 		<script src="../../js/summer.js" ></script>		
 		<script src="../../js/jquery.min.js" ></script>
 		<script src="../../js/Frameworks/iuapmobile.frameworks.ui.js" ></script>
+        <script type="text/javascript" src="js/islider.js"></script>
+        <script>
+        	summerready = function () {
+        		$(function() {
+        			var list = [
+        				{
+        					content: "../../img/g1.jpg"
+        				}, 
+        				{
+        					content: "../../img/g2.jpg"
+        				}, 
+        				{
+        					content: "../../img/g3.jpg"
+        				}
+        			];
+        			var islider = new iSlider({
+        				type: 'pic',
+        				data: list,
+        				dom: document.getElementById("iSlider-wrapper"),
+        				isLooping: true,
+        				animateType: 'default',
+        				isAutoplay: true,
+        				animateTime: 800
+        			});
+        			islider.addDot();
+        		})
+        	}
+        </script>
 	</head>
 	<body>
 		<div class="um-win" id="index">
 			<div class="um-header" >
-				<h3>主页</h3>
+				 
+                 <div class="um-row"><div id="iSlider-wrapper" class="iSlider-wrapper"></div></div>
+
 			</div>
 
 			<div class="um-content">
