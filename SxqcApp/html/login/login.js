@@ -6,8 +6,7 @@ var vm = new Vue({
 			username:'admin',
 			password:'admin'
 		},
-		flag:true,
-		url:url.login
+		flag:true
 
 	},
 	mounted:function (){
@@ -18,7 +17,7 @@ var vm = new Vue({
 			console.log('foo');
 		},
 		login:function(){
-			console.log(this.url);
+			console.log('login');
 			if (this.loginInfo.username == '') {
 				common.toast("账号不能为空");
 				return
