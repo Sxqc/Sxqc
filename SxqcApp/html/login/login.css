@@ -1,0 +1,38 @@
+#app{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: auto;
+}
+.form{
+	width: 80%;
+	margin: 150px auto;
+	margin-bottom: 0;
+	padding: 10px;
+}
+.handle{
+	border-top: 1px solid #ccc;
+	padding: 10px 0;
+	position: relative;
+}
+.um-switch1 p{
+	float: right;
+	margin-left: 15px;
+	height: 32px;
+	line-height: 32px;
+}
+.handle a{
+	float: right;
+	height: 32px;
+	line-height: 32px;
+}
+.form-control{
+	background: transparent;
+}
+.um-input-group span[class^="ti-"] + input.form-control{
+	border: 1px solid #666666;
+	padding-left: 5px;
+}
+.um-input-group span[class^="ti-"]{
+	position: relative;
+}

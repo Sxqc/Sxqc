@@ -1,0 +1,17 @@
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.center{
+	text-align: center;
+}
+.gray{
+	color: #666666 !important;
+}
+.bg_gray{
+	background: #666 !important;
+	color: #fff !important;
+	border: 1px solid #666 !important; 
+}
