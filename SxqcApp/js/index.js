@@ -20,6 +20,7 @@ summerready=function(){
 	}else {
         openTab('home');
     }
+    openTab('home');
 }
 function openLogin(){
    summer.openWin({
