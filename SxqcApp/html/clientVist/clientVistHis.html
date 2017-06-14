@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../../css/iuapmobile.um.css">
+    <link rel="stylesheet" href="../../css/font-icons.css">
+    <link rel="stylesheet" href="../../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="./css/clientVist.css">
+    <link rel="stylesheet" type="text/css" href="../../css/iuapmobile.um.listview.css">
+    <script src="../../js/summer.js"></script>
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/font.js"></script>
+    <script src="../../js/Frameworks/iuapmobile.frameworks.ui.js"></script>
+    <script src="../../js/vue.min.js"></script>
+    <script type="text/javascript" src="../../js/require.js"></script>
+</head>
+
+<body>
+    <div class="um-win" id="index">
+        <div class="um-header">
+            <a @click='back' href="#" class="um-back"></a>
+            <h3>客户拜访历史</h3>
+            <!-- <div class="um-header-btns">
+            		<i class="ti-more" style="transform: rotate(90deg);"></i>
+            	</div> -->
+        </div>
+        <div class="um-content bg_white">
+            <!-- 头部面板 -->
+            <div class="um-header um-header-personal">
+                <div class="um-media-left mt40 ml1r">
+                    <img class="um-circle" height=60 width=60 src="../../img/user.png" alt="...">
+                </div>
+                <div class="um-media-body ml08r um-white mt40 ">
+                    <p>王方</p>
+                    <p>1509808231</p>
+                </div>
+                <div class='center um-media-handle'>
+                    <span class="circle">
+									  <i class="fa fa-commenting gray"></i>
+									</span>
+                    <span class="circle">
+									  <i class="fa fa-phone gray"></i>
+									</span>
+                </div>
+            </div>
+            <!-- 历史列表 -->
+            <div class="um-listview-wrap" id="listview">
+                <ul class="um-list um-no-active">
+                    <li class="um-listview-row bg_white" v-for='(item,index) in clientHis'>
+                        <a href="#" class="um-list-item um-swipe-action">
+                            <div class="um-list-item-media">
+                                <i class="fa fa-check-circle fa-2x"></i>
+                            </div>
+                            <div class="um-list-item-inner">
+                                <div class="um-list-item-body">
+                                    <h4 class="um-media-heading" v-text='item.date'></h4>
+                                    <p class="um-gray f12" v-text='item.txt1'></p>
+                                    <p class="um-gray f12" v-text='item.txt2'></p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="./js/clientVistHis.js"></script>

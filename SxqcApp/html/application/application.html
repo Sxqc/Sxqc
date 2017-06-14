@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../../css/iconfont.css">
     <link rel="stylesheet" href="css/application.css">
     <script src="../../js/summer.js"></script>
+    <script src="../../js/common.js"></script>
     <script src="../../js/jquery.min.js"></script>
     <script src="../../js/font.js"></script>
     <script src="../../js/Frameworks/iuapmobile.frameworks.ui.js"></script>
@@ -25,7 +26,7 @@
             <!-- row1 -->
             <div class="um-grid um-row box">
             	<div class="um-grid-row tc um-border-bottom">
-            		<div class="um-bgc-white" :class='{"borderR":item.text != ""}' v-for="(item,index) in list.row1">
+            		<div @click='toClient(index)' class="um-bgc-white" :class='{"borderR":item.text != ""}' v-for="(item,index) in list.row1">
             			<a href="#" class="um-circle um-black">
                             <i class="blue icon iconfont" :class='item.icon'></i>
             				<div class="f12 mt5" v-text='item.text'></div>

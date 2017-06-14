@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../../css/iuapmobile.um.css">
+    <link rel="stylesheet" href="../../css/font-icons.css">
+    <link rel="stylesheet" href="../../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="./css/clientVist.css">
+    <script src="../../js/summer.js"></script>
+    <script src="../../js/common.js"></script>
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/font.js"></script>
+    <script src="../../js/Frameworks/iuapmobile.frameworks.ui.js"></script>
+    <script src="../../js/vue.min.js"></script>
+</head>
+
+<body>
+    <div class="um-win" id="index">
+        <div class="um-header">
+            <a @click='back' href="#" class="um-back"></a>
+            <h3>客户拜访</h3>
+            <!-- <div class="um-header-btns">
+            		<i class="ti-more" style="transform: rotate(90deg);"></i>
+            	</div> -->
+        </div>
+        <div class="um-content">
+            <!-- banner -->
+            <div class="um-box-justify p5 bg_white">
+                <a href="#">排序<i class='fa fa-exchange fa-rotate-90'></i></a>
+                <a href="#"><i class="fa fa-search"></i>查询</a>
+            </div>
+            <p class="p5">共3条客户信息</p>
+            <!-- list -->
+            <div class="um-list">
+                <a @click='toHis' href="#" class="um-list-item" v-for='(item,indx) in clientInfo'>
+                    <div class="um-list-item-media">
+                        <img src="../../img/ldh.png" class="um-circle" width=60 alt="...">
+                    </div>
+                    <div class="um-list-item-inner">
+                        <div class="um-list-item-body">
+                            <h4 class="um-media-heading">
+														<p class='sign' :class='[item.flag == 1? "red":"green"]' v-text='isPerson(item.flag)'></p>
+                            <span v-text='item.name'></span></h4>
+                            <div class="um-row f12">
+                                <div class="um-xs-12" v-text='item.tel'></div>
+                                <div class="um-xs-4">
+                                    拜访总次数 <span class='font_red' v-text='item.num1'></span>
+                                </div>
+                                <div class="um-xs-4">
+                                    提醒次数 <span class='font_red' v-text='item.num2'></span>
+                                </div>
+                                <div class="um-xs-4">
+                                    未拜访次数 <span class='font_red' v-text='item.num3'></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="./js/clientVist.js"></script>
