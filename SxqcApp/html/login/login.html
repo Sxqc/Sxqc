@@ -1,68 +1,64 @@
 <!DOCTYPE html>
 <html class="um-win">
-	<head>
-		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
-		<meta charset="UTF-8">
-		<title></title>
-		<link rel="stylesheet" href="../../css/font-icons.css">
-		<link rel="stylesheet" href="../../css/iconfont.css">
-		<link rel="stylesheet" href="../../css/common.css">
-		<link rel="stylesheet" href="../../css/iuapmobile.um.css">
-		<script src="../../js/jquery.min.js" ></script>
-		<script src="../../js/summer.js" ></script>
-		<script src='../../js/font.js'></script>
-		<script src='../../js/common.js'></script>
-		<script src="../../js/Frameworks/iuapmobile.frameworks.ui.js" ></script>	 
-    	<link rel="stylesheet" href="./login.css" />
-    	<script src='../../js/vue.min.js'></script>
-    	<script src="../../js/axios.min.js"></script>
-	</head>
-	<body>
-		<div id="app">
-		<!-- login form -->
-			<div class='form'>	
 
-				<!-- 标题 -->
-				<div class="text center">
-					<h2>陕汽重卡</h2>
-					<h2>渠道作业APP</h2>
-				</div>
-                <br>
-				<!-- username -->
-                <div class="um-input-group">
-                	<span class="ti-user gray"></span>
-                	<input v-model='loginInfo.username' type="text" class="form-control" placeholder="USER">
-                </div>
-                <br>
-                <!-- password -->
-                <div class="um-input-group">
-                	<span class="ti-lock gray"></span>
-                	<input v-model='loginInfo.password' type="password" class="form-control" placeholder="PASSWORD">
-                </div>
-                <br>
-		        <!-- btn -->
-		        
-                <button @click='login' class="btn bg_gray">登录</button>
-                <br>
-				<!-- handle -->
-				<div class='handle'>
-			        <label class="um-switch1">
-			        	<input v-model='flag' type="checkbox" value="on" checked="checked">
-			        	<div class="um-track">
-			        		<div class="um-handle">
-			        		</div>
-			        	</div>
-			        	<p>记住密码</p>
-			        </label>
-			        
-                    <a href="#pageid" data-transition="um">忘记密码</a>
+<head>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../../css/font-icons.css">
+    <link rel="stylesheet" href="../../css/iconfont.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/iuapmobile.um.css">
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/summer.js"></script>
+    <script src='../../js/font.js'></script>
+    <script src='../../js/common.js'></script>
+    <script src="../../js/Frameworks/iuapmobile.frameworks.ui.js"></script>
+    <link rel="stylesheet" href="./login.css" />
+    <script src='../../js/vue.min.js'></script>
+    <script src="../../js/axios.min.js"></script>
+</head>
 
-		        </div>
+<body>
+    <div id="app">
+        <!-- login form -->
+        <div class='form'>
+            <!-- 标题 -->
+            <div class="text center">
+                <h2>陕汽重卡</h2>
+                <h2>渠道作业APP</h2>
+            </div>
+            <br>
+            <!-- username -->
+            <div class="um-input-group">
+                <span class="ti-user gray"></span>
+                <input v-model='loginInfo.username' type="text" class="form-control" placeholder="USER">
+            </div>
+            <br>
+            <!-- password -->
+            <div class="um-input-group">
+                <span class="ti-lock gray"></span>
+                <input v-model='loginInfo.password' type="password" class="form-control" placeholder="PASSWORD">
+            </div>
+            <br>
+            <!-- btn -->
+            <button @click='login' class="btn bg_gray">登录</button>
+            <br>
+            <!-- handle -->
+            <div class='handle'>
+                <label class="um-switch1">
+                    <input v-model='flag' type="checkbox" value="on" checked="checked">
+                    <div class="um-track">
+                        <div class="um-handle">
+                        </div>
+                    </div>
+                    <p>记住密码</p>
+                </label>
+                <a href="#pageid" data-transition="um">忘记密码</a>
+            </div>
+        </div>
+    </div>
+</body>
 
-		        
-			</div>
-
-		</div>
-	</body>
 </html>
 <script src="./login.js"></script>

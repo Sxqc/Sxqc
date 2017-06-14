@@ -17,9 +17,10 @@
 }
 .um-switch1 p{
 	float: right;
-	margin-left: 15px;
-	height: 32px;
-	line-height: 32px;
+	margin-left: 0.1rem;
+	height: 0.64rem;
+	line-height: 0.64rem;
+	font-size: 0.3rem;
 }
 .handle a{
 	float: right;

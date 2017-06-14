@@ -81,6 +81,7 @@ var vm = new Vue({
 			    if (this.flag) {
 			    	summer.setStorage("userinfo", userinfo);
 				}
+				common.toast(JSON.stringify(userinfo));
 				summer.openWin({
 					id : "root",
 					url : "index.html",
