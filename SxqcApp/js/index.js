@@ -1,4 +1,4 @@
-﻿function openTab(type,titles){
+﻿function openTab(type){
     //var top = $summer.offset($summer.byId('header')).h;
 	var bottom = $summer.offset($summer.byId('footer')).h;
 	summer.openFrame({

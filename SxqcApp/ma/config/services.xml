@@ -13,7 +13,7 @@
 		</ds-set>
 	</service>
 	
-	<service id="getDeviceStatusService" provider="http" method="post"
+	<service id="login" provider="http" method="get"
 		returntype="String">
 		<properties>
 		</properties>
@@ -21,5 +21,26 @@
 			<datasource name="emm_url" />
 		</ds-set>
 	</service>
+	
+	<service id="homedata" provider="http" method="get"
+		returntype="String">
+		<properties>
+		</properties>
+		<ds-set>
+			<datasource name="home_url" />
+		</ds-set>
+	</service>
+	
+	
+	<service id="tokendata" provider="http" method="get"
+		returntype="String">
+		<properties>
+		</properties>
+		<ds-set>
+			<datasource name="token_url" />
+		</ds-set>
+	</service>
+	
+	
 	
 </gateway>
