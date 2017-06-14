@@ -1,196 +1,103 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
-		<meta charset="UTF-8">
-		<title></title>
-		<link rel="stylesheet" href="../../css/iuapmobile.um.css">
-		<link rel="stylesheet" href="../../css/font-icons.css">	
-		<link rel="stylesheet" href="css/application.css">	
-		<script src="../../js/summer.js" ></script>		
-		<script src="../../js/jquery.min.js" ></script>
-		<script src="../../js/Frameworks/iuapmobile.frameworks.ui.js" ></script>
-	</head>
-	<body>
-		<div class="um-win" id="index">
-			<div class="um-header" >
-				<h3>应用列表</h3>
-			</div>
 
-			<div class="um-content">
-                 <div class="um-grid">
-                 	<div class="um-grid-row tc">
-                 		<div class="um-border-right um-bgc-white">
-                 			<a href="#" class="um-black">
-                 				<img src="img/mt_lklist.png" width=40 class="um-img-responsive" alt="">
-                 				<div class="f12 mt5">销售线索</div>
-                 			</a>
-                 		</div>
-                 		<div class="um-border-right um-bgc-white">
-                 			<a href="#" class="um-black">
-                 				<img src="img/mt_man.png" width=40 class="um-img-responsive" alt="">
-                 				<div  class="f12 mt5">客户</div>
-                 			</a>
-                 		</div>
-                 		<div class="um-border-right um-bgc-white">
-                 			<a href="#" class="um-black">
-                 				<img src="img/mt_shanji.png" width=40 class="um-img-responsive" alt="">
-                 				<div  class="f12 mt5">商机</div>
-                 			</a>
-                 		</div>
-                 		<div class="um-border-right um-bgc-white">
-                 			<a href="#" class="um-black">
-                 			</a>
-                 		</div>
-                 	</div>
-                 	<!-- 第二行 -->
-                 	<div class="um-grid-row tc">
-                 		<div class="um-border-right um-bgc-white">
-                 			<a href="#" class="um-black">
-                 				<img src="img/mt_track.png" width=40 class="um-img-responsive" alt="">
-                 				<div class="f12 mt5">添加线索</div>
-                 			</a>
-                 		</div>
-                 		<div class="um-border-right um-bgc-white">
-                 			<a href="#" class="um-black">
-                 				<img src="img/mt_cus.png" width=40 class="um-img-responsive" alt="">
-                 				<div  class="f12 mt5">添加客户</div>
-                 			</a>
-                 		</div>
-                 		<div class="um-border-right um-bgc-white">
-                 			<a href="#" class="um-black">
-                 				<img src="img/mt_cusc.png" width=40 class="um-img-responsive" alt="">
-                 				<div  class="f12 mt5">客户邀请</div>
-                 			</a>
-                 		</div>
-                 		<div class="um-border-right um-bgc-white">
-                 			<a href="#" class="um-black">
-                 				<img src="img/mt_visit.png" width=40 class="um-img-responsive" alt="">
-                 				<div  class="f12 mt5">添加拜访</div>
-                 			</a>
-                 		</div>
-                 	</div>
-                 	<!-- 第三行 -->
-                 	<div class="um-grid-row tc">
-                 		<div class="um-border-right um-bgc-white">
-                 			<a href="#" class="um-black">
-                 				<img src="img/mt_cusback.png" width=40 class="um-img-responsive" alt="">
-                 				<div class="f12 mt5">客户回访</div>
-                 			</a>
-                 		</div>
-                 		<div class="um-border-right um-bgc-white">
-                 			<a href="#" class="um-black">
-                 				<img src="img/mt_cstaz.png" width=40 class="um-img-responsive" alt="">
-                 				<div  class="f12 mt5">客户评价</div>
-                 			</a>
-                 		</div>
-                 		<div class="um-border-right um-bgc-white"></div>
-                 		<div class="um-border-right um-bgc-white"></div>
-                 	</div>
-                 	<!-- 第四行 -->
-                 	<div class="um-grid-row tc">
-                 		<div class="um-border-right um-bgc-white">
-                 			<a href="#" class="um-black">
-                 				<img src="img/mt_sale.png" width=40 class="um-img-responsive" alt="">
-                 				<div class="f12 mt5">销售业绩管理</div>
-                 			</a>
-                 		</div>
-                 		<div class="um-border-right um-bgc-white">
-                 			<a href="#" class="um-black">
-                 				<img src="img/mt_analyze.png" width=40 class="um-img-responsive" alt="">
-                 				<div  class="f12 mt5">销售业务分析</div>
-                 			</a>
-                 		</div>
-                 		<div class="um-border-right um-bgc-white">
-                 			<a href="#" class="um-black">
-                 				<img src="img/mt_eryz.png" width=40 class="um-img-responsive" alt="">
-                 				<div  class="f12 mt5">销售日常报表</div>
-                 			</a>
-                 		</div>
-                 		<div class="um-border-right um-bgc-white"></div>
-                 	</div>
-                 </div>
-                 <br>
-				 <div class="um-grid">
-                 	<div class="um-grid-row tc">
-                 		<div class="um-border-right um-bgc-white">
-                 			<a href="#" class="um-black">
-                 				<img src="img/mt_odrmng.png" width=40 class="um-img-responsive" alt="">
-                 				<div class="f12 mt5">工单管理</div>
-                 			</a>
-                 		</div>
-                 		<div class="um-border-right um-bgc-white">
-                 			<a href="#" class="um-black">
-                 				<img src="img/mt_odrjob.png" width=40 class="um-img-responsive" alt="">
-                 				<div  class="f12 mt5">工单作业</div>
-                 			</a>
-                 		</div>
-                 		<div class="um-border-right um-bgc-white">
-                 			<a href="#" class="um-black">
-                 				<img src="img/mt_rescue.png" width=40 class="um-img-responsive" alt="">
-                 				<div  class="f12 mt5">救援</div>
-                 			</a>
-                 		</div>
-                 		<div class="um-border-right um-bgc-white">
-                 			<a href="#" class="um-black">
-                 			<img src="img/mt_maintain.png" width=40 class="um-img-responsive" alt="">
-                 				<div  class="f12 mt5">维修</div>
-                 			</a>
-                 		</div>
-                 	</div>
-                 	<!-- 第二行 -->
-                 	<div class="um-grid-row tc">
-                 		<div class="um-border-right um-bgc-white">
-                 			<a href="#" class="um-black">
-                 				<img src="img/mt_psnmng.png" width=40 class="um-img-responsive" alt="">
-                 				<div class="f12 mt5">人员管理</div>
-                 			</a>
-                 		</div>
-                 		<div class="um-border-right um-bgc-white">
-                 			<a href="#" class="um-black">
-                 				<img src="img/mt_vcmng.png" width=40 class="um-img-responsive" alt="">
-                 				<div  class="f12 mt5">车辆管理</div>
-                 			</a>
-                 		</div>
-                 		<div class="um-border-right um-bgc-white">
-                 			<a href="#" class="um-black">
-                 				<img src="img/mt_elt.png" width=40 class="um-img-responsive" alt="">
-                 				<div  class="f12 mt5">评价管理</div>
-                 			</a>
-                 		</div>
-                 		<div class="um-border-right um-bgc-white"> 
-                 			<a href="#" class="um-black">
-                 			</a>
-                 		</div>
-                 	</div>
-                 	<div class="um-grid-row tc">
-                 		<div class="um-border-right um-bgc-white">
-                 			<a href="#" class="um-black">
-                 				<img src="img/mt_service.png" width=40 class="um-img-responsive" alt="">
-                 				<div class="f12 mt5">服务日常报表</div>
-                 			</a>
-                 		</div>
-                 		<div class="um-border-right um-bgc-white"></div>
-                 		<div class="um-border-right um-bgc-white"></div>
-                 		<div class="um-border-right um-bgc-white"></div>
-                 	</div>
-                 </div>
-                 <br>
-                 <div class="um-grid">
-	                 <div class="um-grid-row tc">
-	                 	<div class="um-border-right um-bgc-white">
-		         			<a href="#" class="um-black">
-		         				<img src="img/mt_adslist.png" width=40 class="um-img-responsive" alt="">
-		         				<div class="f12 mt5">通讯录</div>
-		         			</a>
-		         		</div>
-		         		<div class="um-border-right um-bgc-white"></div>
-		         		<div class="um-border-right um-bgc-white"></div>
-		         		<div class="um-border-right um-bgc-white"></div>
-	                 </div>
-                 </div>
-			   </div>
-			</div>
-		</div>
-	</body>
+<head>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../../css/iuapmobile.um.css">
+    <link rel="stylesheet" href="../../css/font-icons.css">
+    <link rel="stylesheet" href="../../css/iconfont.css">
+    <link rel="stylesheet" href="css/application.css">
+    <script src="../../js/summer.js"></script>
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/font.js"></script>
+    <script src="../../js/Frameworks/iuapmobile.frameworks.ui.js"></script>
+    <script src="../../js/vue.min.js"></script>
+</head>
+
+<body>
+    <div class="um-win" id="index">
+        <div class="um-header">
+            <h3>应用列表</h3>
+        </div>
+        <div class="um-content">	
+            <!-- row1 -->
+            <div class="um-grid um-row box">
+            	<div class="um-grid-row tc um-border-bottom">
+            		<div class="um-bgc-white" :class='{"borderR":item.text != ""}' v-for="(item,index) in list.row1">
+            			<a href="#" class="um-circle um-black">
+                            <i class="blue icon iconfont" :class='item.icon'></i>
+            				<div class="f12 mt5" v-text='item.text'></div>
+            			</a>
+            		</div>
+            	</div>
+            	<div class="um-grid-row tc um-border-bottom">
+            		<div class="um-bgc-white" :class='{"borderR":item.text != ""}' v-for="(item,index) in list.row2">
+            			<a href="#" class="um-circle um-black">
+            				<i class="orangle icon iconfont" :class='item.icon'></i>
+                            <div class="f12 mt5" v-text='item.text'></div>
+            			</a>
+            		</div>
+            	</div>
+                <div class="um-grid-row tc um-border-bottom">
+                    <div class="um-bgc-white" :class='{"borderR":item.text != ""}' v-for="(item,index) in list.row3">
+                        <a href="#" class="um-circle um-black">
+                            <i class="orangle icon iconfont" :class='item.icon'></i>
+                            <div class="f12 mt5" v-text='item.text'></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="um-grid-row tc um-border-bottom">
+                    <div class="um-bgc-white" :class='{"borderR":item.text != ""}' v-for="(item,index) in list.row4">
+                        <a href="#" class="um-circle um-black">
+                            <i class="yellow icon iconfont" :class='item.icon'></i>
+                            <div class="f12 mt5" v-text='item.text'></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- row2 -->
+            <div class="um-grid um-row box">
+                <div class="um-grid-row tc um-border-bottom">
+                    <div class="um-bgc-white" :class='{"borderR":item.text != ""}' v-for="(item,index) in list.row5">
+                        <a href="#" class="um-circle um-black">
+                            <i class="blue icon iconfont" :class='item.icon'></i>
+                            <div class="f12 mt5" v-text='item.text'></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="um-grid-row tc um-border-bottom">
+                    <div class="um-bgc-white" :class='{"borderR":item.text != ""}' v-for="(item,index) in list.row6">
+                        <a href="#" class="um-circle um-black">
+                            <i class="orangle icon iconfont" :class='item.icon'></i>
+                            <div class="f12 mt5" v-text='item.text'></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="um-grid-row tc um-border-bottom">
+                    <div class="um-bgc-white" :class='{"borderR":item.text != ""}' v-for="(item,index) in list.row7">
+                        <a href="#" class="um-circle um-black">
+                            <i class="yellow icon iconfont" :class='item.icon'></i>
+                            <div class="f12 mt5" v-text='item.text'></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- row3 -->
+            <div class="um-grid um-row box">
+                <div class="um-grid-row tc um-border-bottom">
+                    <div class="um-bgc-white" :class='{"borderR":item.text != ""}' v-for="(item,index) in list.row8">
+                        <a href="#" class="um-circle um-black">
+                            <i class="blue icon iconfont" :class='item.icon'></i>
+                            <div class="f12 mt5" v-text='item.text'></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>
+<script src='./js/application.js'></script>
