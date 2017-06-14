@@ -19,10 +19,13 @@
     padding-right: 0.1rem;
 }
 .circle{
-	padding: 10px;
-	border-radius: 50%;
-	border: 1px solid #666;
-	background: #fff;
+    width: .8rem;
+    height: .8rem;
+    border-radius: 0.8rem;
+    line-height: .8rem;
+    border: 1px solid #666;
+    background: #fff;
+    display: inline-block;
 }
 .um-header-personal{
 	background: #0066CC !important;
