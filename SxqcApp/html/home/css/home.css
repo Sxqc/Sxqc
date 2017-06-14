@@ -1,0 +1,38 @@
+ .divCss5{
+ 	width:94%;
+ 	margin-left:3%;
+	/*height:44%;*/
+	margin-top:02 rem;
+	border:0.02 rem solid #000
+	} 
+	
+	 .comment_inner{
+
+    width: 94%;
+    
+    margin-left:3%;
+
+    word-break: break-all;
+
+    text-overflow: ellipsis;
+
+    display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+
+    -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+
+    -webkit-line-clamp: 2; /** 显示的行数 **/
+
+    overflow: hidden;  /** 隐藏超出的内容 **/
+   
+   }
+ .um-list-item-body{
+ 	position:relative;
+ }
+ .usern{
+ 	position: relative;
+ 	top:0.4rem;
+ 	right:0.6rem;
+ }
+ .f30{
+ font-size: 0.6rem;
+ }
