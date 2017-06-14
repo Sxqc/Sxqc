@@ -281,8 +281,13 @@ var G_Obsolete_API = "此API为全局function，为避免命名冲突污染，�
 	}
 	
 	w.common = new c();
-})(window)
 
+	//所有请求接口地址
+	var u = {};
+	u.login = 'http://10.180.3.119:8080/dms.web/dmsMobile/common/login?groupCode=GMS001&validate=&_=1496979336890';
+
+	w.u = u;
+})(window)
 
 /*********************************** Global method Define ***********************************/
 
