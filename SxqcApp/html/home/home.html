@@ -7,6 +7,10 @@
 		<link rel="stylesheet" href="../../css/iuapmobile.um.css">
 		<link rel="stylesheet" href="../../css/font-icons.css">
         <link rel="stylesheet" type="text/css" href="css/islider.css">
+        <link rel="stylesheet" type="text/css" href="css/home.css">
+        <link rel="stylesheet" type="text/css" href="../../css/iuapmobile.um.listview.css">
+		<link rel="stylesheet" type="text/css" href="../../css/iuapmobile.um.listview.css">
+
         <style>
         	.iSlider-wrapper {
         		height: 150px;
@@ -18,20 +22,17 @@
     	<script src="../../js/font.js"></script>
 		<script src="../../js/Frameworks/iuapmobile.frameworks.ui.js" ></script>
         <script type="text/javascript" src="js/islider.js"></script>
+        <script type="text/javascript" src="../../js/knockout.js"></script>
+		<script type="text/javascript" src="../../js/Frameworks/iuapmobile.frameworks.listview.js"></script>
         <script>
-        	summerready = function () {
         		$(function() {
-        			var list = [
-        				{
-        					content: "../../img/g1.jpg"
-        				}, 
-        				{
-        					content: "../../img/g2.jpg"
-        				}, 
-        				{
-        					content: "../../img/g3.jpg"
-        				}
-        			];
+        			var list = [{
+						content : "../../img/s1.png"
+					}, {
+						content : "../../img/s2.png"
+					}, {
+						content : "../../img/s3.png"
+					}];
         			var islider = new iSlider({
         				type: 'pic',
         				data: list,
@@ -43,20 +44,188 @@
         			});
         			islider.addDot();
         		})
-        	}
         </script>
 	</head>
 	<body>
 		<div class="um-win" id="index">
 			<div class="um-header" >
-				 
-                 <div class="um-row"><div id="iSlider-wrapper" class="iSlider-wrapper"></div></div>
+
+				<div class="um-row">
+					<div id="iSlider-wrapper" class="iSlider-wrapper"></div>
+				</div>
 
 			</div>
 
 			<div class="um-content">
-				 这是home页面
+				<div class="divCss5">
+					<div class="um-label um-box-justify " >
+
+						<div>
+							<img class="img-rounded" src="../../img/mt_you.png" width=35 height=35 alt="">
+							<span>通知/公告</span>
+						</div>
+
+						<span class="mr15" style="font-weight:bold">...</span>
+
+					</div>
+					<hr width="80%" color=#000/>
+
+					<div class="um-listview-wrap" id="listview">
+						<ul class="um-list um-no-active" data-bind="foreach: data">
+							<li class="um-listview-row">
+								<a href="#" class="um-list-item um-swipe-action um-no-icon">
+								<div class="um-swipe-btns">
+									<span class="um-swipe-btn um-delete">删除</span>
+								</div>
+								<div class="um-list-item-media msg-info">
+									<img alt="" data-bind="attr:{'src': img}" width=50>
+								</div>
+								<div class="um-list-item-inner">
+									<div class="um-list-item-body">
+										<h4 class="um-media-heading fb f16 um-text-overflow" data-bind="text:sender"></h4>
+										<p class="um-gray f14 comment_inner" data-bind="text:lastMsg"></p>
+									</div>
+
+								</div> </a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="divCss5">
+
+					<div class="um-label ">
+						<i class="ti-menu-alt iSr-wrapper f30"></i>
+						<span class="f16">工作任务</span>
+					</div>
+
+					<div class="um-listview-wrap" id="listJob">
+						<ul class="um-list um-no-active" data-bind="foreach: data">
+							<li class="um-listview-row">
+								<a href="#" class="um-list-item um-swipe-action um-no-icon">
+								<div class="um-swipe-btns">
+									<span class="um-swipe-btn um-delete">删除</span>
+								</div>
+								<div class="um-list-item-media msg-info">
+									<img alt="" data-bind="attr:{'src': img}" width=50>
+								</div>
+								<div class="um-list-item-inner">
+									<div class="um-list-item-body">
+										<div class="um-media-heading fb f16 um-text-overflow" >
+											  <span data-bind="text:sender" class=""></span><span class="pr15 fr" data-bind="text:lastMsg"></span>
+										</div>
+										<p class="um-gray f14 um-text-overflow" data-bind="text:lastTime"></p>
+									</div>
+									<div class="pr10">
+										<span class="um-gray f12" data-bind="text:msgxhao"></span>
+									</div>
+								</div> </a>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+
 			</div>
+
 		</div>
+		</div>
+
+		<script>
+				var sessionId,tenantId,currentToken;
+				 var limitNum = "3";
+                var offsetNum = "0";
+				summerready=function(){
+					var userinfo = summer.getStorage("userinfo");
+				     currentToken = summer.getStorage("urlToken");
+					if(null != userinfo){
+						 sessionId = userinfo.sessionId;
+						 tenantId = userinfo.tenantId;
+					}
+					//getdata1();
+			
+				}
+			function getdata1(){
+				 summer.callAction({
+						       "viewid" : "com.yonyou.sxqcapp.HomeInit", //后台带包名的Controller名
+						       "action" : "homedata", //方法名
+						        "params":{
+						        urlToken:currentToken,
+						        dmsFuncId:"302002",
+						        sort:"VIN",
+						        order:"asc",
+						        limit:limitNum,
+						        offset:offsetNum,
+						        sessionId:sessionId,
+						        tenantId:tenantId,
+						        
+						        },
+						     
+						       "callback" : "callhome()", //请求回来后执行的js方法
+						       "error" : "homeerror()" //失败回调的js方法 
+	                })
+			}
+			
+			function callhome(response){
+			alert("成功"+JSON.stringify(response));
+			}
+			function homeerror(response){
+			alert("失败"+response.err_msg);
+			}
+				
+			$(function() {
+				//构造控件实例
+				
+				//Knockout绑定
+				var ViewModel = function() {
+				};
+				var jsonArray1 = [{
+					"sender" : "公司召开2017年一季度运营分析会",
+					"img" : "../../img/org1.png",
+					"lastMsg" : "4月14日-15日，公司召开2017年一季度运营分析会，分析总结公司一季度经营工作...",
+				}, {
+					"sender" : "陕西喜迎2017首季开门红",
+					"img" : "../../img/org2.png",
+					"lastMsg" : "一季度累计销量4.3万辆，同比增长74%陕汽喜迎2017首季开门红",
+				}];
+
+				var viewModel = new ViewModel();
+				var listview1 = document.getElementById("listview");
+				viewModel.data = ko.observableArray(jsonArray1);
+				ko.applyBindings(viewModel,listview1);
+			});
+
+		</script>
+
+		<script>$(function() {
+			
+				//Knockout绑定
+				var ViewModel = function() {
+				};
+				var jsonArray = [{
+					"sender" : "顺丰快递山东分公司",
+					"img" : "../../img/org1.png",
+					"msgxhao" : 0,
+					"lastMsg" : "A级用户",
+					"lastTime" : "上次跟进时间：2017-4-5"
+				}, {
+					"sender" : "于四海",
+					"img" : "../../img/org2.png",
+					"msgxhao" : 4,
+					"lastMsg" : "A级用户",
+					"lastTime" : "上次跟进时间：2017-4-5"
+				}, {
+					"sender" : "张山",
+					"img" : "../../img/org3.png",
+					"msgxhao" : 5,
+					"lastMsg" : "VIN:1G1BL52P7TR115520",
+					"lastTime" : "上次点检时间：2017-4-5"
+				}];
+				var viewModel = new ViewModel();
+				var listJob1 = document.getElementById('listJob');
+				viewModel.data = ko.observableArray(jsonArray);
+				ko.applyBindings(viewModel,listJob1);
+
+			});</script>
+			
 	</body>
 </html>

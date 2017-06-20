@@ -2,8 +2,8 @@
  	width:94%;
  	margin-left:3%;
 	/*height:44%;*/
-	margin-top:02 rem;
-	border:0.02 rem solid #000
+	margin-top:0.2rem;
+	border:0.02rem solid #000
 	} 
 	
 	 .comment_inner{
@@ -36,3 +36,54 @@
  .f30{
  font-size: 0.6rem;
  }
+ 
+			.msg-info {
+				position: relative;
+			}
+			.msg-info .um-badge {
+				position: absolute;
+				right: -10px;
+				font-size: 12px;
+			}
+			.msg-header {
+				width: 40px;
+				height: 40px;
+				line-height: 40px;
+				background: blue;
+				border-radius: 50%;
+				text-align: center;
+				color: white;
+			}
+			.um-listview-row:active {
+				background-color: #eee;/*����б��и��м���״̬�µı���ɫ*/
+			}
+
+			.msg-info {
+				position: relative;
+			}
+			.msg-info .um-badge {
+				position: absolute;
+				right: -10px;
+				font-size: 12px;
+			}
+			.msg-header {
+				width: 40px;
+				height: 40px;
+				line-height: 40px;
+				background: blue;
+				border-radius: 50%;
+				text-align: center;
+				color: white;
+			}
+			.um-listview-row:active {
+				background-color: #eee;
+			}
+
+			.iSlider-wrapper {
+				height: 150px;
+			}
+			.iSr-wrapper {
+				position: relative;
+				top: 5px;
+				left: 2px;
+			}

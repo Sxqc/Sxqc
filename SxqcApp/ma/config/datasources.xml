@@ -2,15 +2,15 @@
 <dsset>
 
 	<datasource id="emm_url">
-		<url>http://10.180.3.53:8080/dms.web/dmsMobile/common/login</url>
+		<url>http://192.168.0.119:8080/szqdms/LoginAction/loginMobile.ajax</url>
 	</datasource>	
 	
 	<datasource id="home_url">
-		<url>http://10.180.3.53:8080/dms.web/dmsMobile/customerManage/vehicle</url>
+		<url>http://10.180.2.203:8080/dms.web/dmsMobile/customerManage/vehicle</url>
 	</datasource>	
 	
 	<datasource id="token_url">
-		<url>http://10.180.3.53:8080/dms.web/dmsMobile/common/login/refreshToken</url>
+		<url>http://10.180.2.203:8080/dms.web/dmsMobile/common/login/refreshToken</url>
 	</datasource>
 	
 </dsset>

@@ -16,17 +16,17 @@ public class LoginInit {
 
 		   JSONObject json = new JSONObject(ages);
 			Map map = UmContextUtil.transJsonToMap(json);
-			    String groupCode = (String) map.get("groupCode");
+		/*	    String groupCode = (String) map.get("groupCode");
 				map.put("groupCode",groupCode);
 				String validate = (String) map.get("validate");
 				map.put("validate",validate);
 				String str = (String) map.get("_");
-				map.put("_",str);
-				String username = (String) map.get("username");
+				map.put("_",str);*/
+	/*			String username = (String) map.get("username");
 				String password = (String) map.get("password");
 				map.put(username, username);
 				map.put(password, password);
-			
+			*/
 			String appid = (String) map.get("appid");
 
 			IGatewayService service = GatewayServiceFactory.findGatewayService(appid, "login", map);

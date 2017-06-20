@@ -9,14 +9,16 @@
     <link rel="stylesheet" href="../../css/iconfont.css">
     <link rel="stylesheet" href="../../css/common.css">
     <link rel="stylesheet" href="../../css/iuapmobile.um.css">
+    <link rel="stylesheet" href="./css/login.css" />
     <script src="../../js/jquery.min.js"></script>
     <script src="../../js/summer.js"></script>
     <script src='../../js/font.js'></script>
     <script src='../../js/common.js'></script>
     <script src="../../js/Frameworks/iuapmobile.frameworks.ui.js"></script>
-    <link rel="stylesheet" href="./login.css" />
+ 
     <script src='../../js/vue.min.js'></script>
     <script src="../../js/axios.min.js"></script>
+    <script src="./js/login.js"></script>
 </head>
 
 <body>
@@ -32,17 +34,17 @@
             <!-- username -->
             <div class="um-input-group">
                 <span class="ti-user gray"></span>
-                <input v-model='loginInfo.username' type="text" class="form-control" placeholder="USER">
+                <input  id="username" type="text" class="form-control" placeholder="USER">
             </div>
             <br>
             <!-- password -->
             <div class="um-input-group">
                 <span class="ti-lock gray"></span>
-                <input v-model='loginInfo.password' type="password" class="form-control" placeholder="PASSWORD">
+                <input id="password" type="password" class="form-control" placeholder="PASSWORD">
             </div>
             <br>
             <!-- btn -->
-            <button @click='login' class="btn bg_gray">登录</button>
+            <button onclick="login()" class="btn bg_gray">登录</button>
             <br>
             <!-- handle -->
             <div class='handle'>
@@ -61,4 +63,4 @@
 </body>
 
 </html>
-<script src="./login.js"></script>
+
