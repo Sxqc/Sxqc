@@ -10,7 +10,7 @@ function login() {
 		return false;
 	}
 	summer.writeConfig({
-		"host" : "192.168.0.121", //MA主机地址
+		"host" : "192.168.0.132", //MA主机地址
 		"port" : "8080" //MA主机端口
 	});
 	summer.showProgress({
@@ -24,9 +24,9 @@ function login() {
 		"viewid" : "com.yonyou.sxqcapp.LoginInit", //后台带包名的Controller名
 		"action" : "login", //方法名
 		"params" : {
-			groupCode : "GMS001",
-			validate : "",
-			_ : "1496979336890",
+			//groupCode : "GMS001",
+			///validate : "",
+			//_ : "1496979336890",
 			username : muser,
 			password : mpwd
 		}, //groupCode:"GMS001",validate:"",_:"1496979336890",
@@ -38,20 +38,28 @@ function login() {
 }
 
 function callback(response) {
-	refreshToken();
-	alert("回调成功" + JSON.stringify(response));
+	//refreshToken();
+	//alert("回调成功" + JSON.stringify(response));
 	var userinfo = {
-		tenantId : response.tenantId,
-		sessionId : response.sessionId
+		tenantId : "111",
+		sessionId : "222"
 	}
-	 if (this.flag) {
+	
+	if(response.msg=="SUCCESS"){
+	  if ( document.getElementById("flag").checked) {
 		summer.setStorage("userinfo", userinfo);
-	}
+	   }
 	    summer.openWin({
 		id : "root",
 		url : "index.html",
+		pageParam: {
+		'source':"login"
+		},
 	    isKeep : false,
 	});
+	}else{
+	summer.toast({msg:"登录失败，账号密码错误！",position:"middle"});
+	}
 }
 
 function myerror(response) {

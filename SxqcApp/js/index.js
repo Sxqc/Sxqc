@@ -13,13 +13,17 @@
 	});       
 }
 summerready=function(){
-	var userinfo=summer.getStorage("userinfo");
-	if(!isLogin()){
+var source = summer.pageParam.source;
+if(source=='login'){
+ openTab('home');
+} else {
+   if(!isLogin()){
 		openLogin();
 		return false;
 	}else {
         openTab('home');
     }
+}
 }
 function openLogin(){
    summer.openWin({

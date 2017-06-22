@@ -108,14 +108,14 @@ var app = new Vue({
             }]
         }
     },
-    mounted() {
-        this.foo()
+    mounted : function() {
+        this.foo();
     },
     methods: {
-        foo() {
-            console.log('foo')
+        foo : function() {
+            console.log('foo');
         },
-        toClient(index) {
+        toClient : function(index) {
             switch (index) {
                 case 0:
                     console.log(0);

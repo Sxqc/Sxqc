@@ -24,27 +24,7 @@
         <script type="text/javascript" src="js/islider.js"></script>
         <script type="text/javascript" src="../../js/knockout.js"></script>
 		<script type="text/javascript" src="../../js/Frameworks/iuapmobile.frameworks.listview.js"></script>
-        <script>
-        		$(function() {
-        			var list = [{
-						content : "../../img/s1.png"
-					}, {
-						content : "../../img/s2.png"
-					}, {
-						content : "../../img/s3.png"
-					}];
-        			var islider = new iSlider({
-        				type: 'pic',
-        				data: list,
-        				dom: document.getElementById("iSlider-wrapper"),
-        				isLooping: true,
-        				animateType: 'default',
-        				isAutoplay: true,
-        				animateTime: 800
-        			});
-        			islider.addDot();
-        		})
-        </script>
+
 	</head>
 	<body>
 		<div class="um-win" id="index">
@@ -135,8 +115,29 @@
 				 var limitNum = "3";
                 var offsetNum = "0";
 				summerready=function(){
+				
+				$(function() {
+        			var list = [{
+						content : "../../img/s1.png"
+					}, {
+						content : "../../img/s2.png"
+					}, {
+						content : "../../img/s3.png"
+					}];
+        			var islider = new iSlider({
+        				type: 'pic',
+        				data: list,
+        				dom: document.getElementById("iSlider-wrapper"),
+        				isLooping: true,
+        				animateType: 'default',
+        				isAutoplay: true,
+        				animateTime: 800
+        			});
+        			islider.addDot();
+        		})
+				
 					var userinfo = summer.getStorage("userinfo");
-				     currentToken = summer.getStorage("urlToken");
+				   //  currentToken = summer.getStorage("urlToken");
 					if(null != userinfo){
 						 sessionId = userinfo.sessionId;
 						 tenantId = userinfo.tenantId;
